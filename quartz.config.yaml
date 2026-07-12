@@ -17,9 +17,9 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: Inter
+      body: Inter
+      code: Roboto Mono
     colors:
       lightMode:
         light: "#faf8f8"
@@ -223,7 +223,7 @@ plugins:
       priority: 10
 
   - source: github:quartz-community/content-meta
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 20
@@ -235,23 +235,23 @@ plugins:
       priority: 30
 
   - source: github:quartz-community/page-title
-    enabled: true
+    enabled: false
     layout:
-      position: header
+      position: left
       priority: 10
 
   - source: github:quartz-community/darkmode
     enabled: true
     layout:
-      position: header
-      priority: 20
+      position: right
+      priority: 10
       group: toolbar
 
   - source: github:quartz-community/reader-mode
     enabled: true
     layout:
-      position: header
-      priority: 30
+      position: right
+      priority: 20
       group: toolbar
 
   - source: github:quartz-community/breadcrumbs
@@ -314,7 +314,7 @@ plugins:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: true
+    enabled: false
     options:
       theme: default
 
@@ -340,7 +340,9 @@ layout:
         left: []
         right: []
 
-    content: {}
+    content:
+      positions:
+        left: []
 
     folder:
       exclude:
