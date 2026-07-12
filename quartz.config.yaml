@@ -237,7 +237,11 @@ plugins:
 - source: github:quartz-community/content-page
   enabled: true
 - source: github:quartz-community/folder-page
-  enabled: false
+  enabled: true
+  options:
+    showFolderCount: false
+    showSubfolders: true
+    prefixFolders: false
 - source: github:quartz-community/tag-page
   enabled: false
 - source: github:quartz-community/explorer
@@ -376,7 +380,9 @@ layout:
     folder:
       exclude:
       - reader-mode
+      - table-of-contents
       positions:
+        left: []
         right: []
     tag:
       exclude:
